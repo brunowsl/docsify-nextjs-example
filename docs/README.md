@@ -1,12 +1,12 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Casos de Uso
+## **Casos de Uso**
 
 Referem-se aos serviços, tarefas ou funções que podem ser utilizadas de alguma maneira pelos usuários do sistema;
 
 Representados na forma de elipses com texto interno descrevendo a que serviço o caso de uso se refere.
 
-## Associações
+## **Associações**
 
 Representam as interações ou relacionamentos entre os casos de uso:  
     **Inclusão.**  
@@ -18,7 +18,7 @@ Representam as interações ou relacionamentos entre os casos de uso:
 – Os atores que fazem parte do diagrama:  
     **Generalização**
 
-## Especificação de um Caso de Uso
+## **Especificação de um Caso de Uso**
 
 Casos de uso são requisitos principalmente funcionais, mas podem registrar outros (não funcionais);
 
@@ -27,7 +27,7 @@ Casos de uso são documentos textuais, mas a UML define um diagrama diagrama de 
 – Nomes dos atores e interação dos mesmos com o sistema;  
 – Relacionamentos entre casos de uso.
 
-## Tipos e Formatos de Casos de Uso
+## **Tipos e Formatos de Casos de Uso**
 
 Casos de uso caixa preta (omitem o comportamento interno) – mais comuns e recomendados.
 
@@ -35,7 +35,7 @@ Exemplo do estilo:
 – Recomendado Recomendado: o sistema sistema registra registra a venda;  
 – Não Recomendado: o sistema grava a venda em um banco de dados (ou mesmo, gera uma instrução INSERT).
 
-## Exemplo de caso de uso
+## **Exemplo de caso de uso**
 
 ### Caso de Uso CDU1: Processar Venda
 
@@ -71,7 +71,7 @@ Poderia ser quase contínuo.
 ##### Problemas em Aberto:  
 Quais as variações nas leis de impostos?
 
-## Como Encontrar Atores, Objetivos e Casos de Uso?
+## **Como Encontrar Atores, Objetivos e Casos de Uso?**
 
 ### Casos de uso são identificados para satisfazer aos objetivos de usuário dos atores principais:
 Escolher a fronteira do sistema;  
@@ -84,7 +84,7 @@ Inicialmente redija os casos de uso no estilo essencial – sem levar em conside
 
 O estilo concreto – deixa claro no texto decisões sobre a interface com o usuário – próprio para as fases seguintes à concepção/iniciação.
 
-## Diagrama de Casos de Uso
+## **Diagrama de Casos de Uso**
 
 O que é?  
 – Diagrama pertencente a UML.
@@ -93,20 +93,20 @@ Objetivos
 – Apresentar uma visão externa geral das funções e serviços que o sistema vai oferecer aos usuários;
 – Atuar como ferramenta na etapa de levantamento de requisitos.
 
-## Atores
+## **Atores**
 
 - Um diagrama de casos de uso é composto basicamente por atores e casos de uso;
 - Os atores representam os papéis desempenhados pelos diversos usuários que poderão utilizar o sistema;
 - Um ator pode representar um hardware especial ou mesmo outro sistema;
 - Em suma: qualquer agente externo que interaja com o sistema.
 
-## Relacionamento de Generalização/Especialização
+## **Relacionamento de Generalização/Especialização**
 
 • Relaciona casos de uso com características semelhantes e pequenas diferenças entre si;
 • Nesses casos é definido um caso de uso geral e definir casos de uso que são especializações deste;
 • Neste caso evita-se a redação das partes genéricas em mais de um caso de uso, a redação dos casos de uso especializados se concentra nas diferenças.
 
 
-## Aprenda Mais
+## **Aprenda Mais**
 
 Para aprender mais sobre Casos de Uso para desenvolvimento de softwares acesse este [Link](https://www.dca.ufrn.br/~anderson/FTP/dca0120/P2_Aula3.pdf)
