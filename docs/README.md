@@ -1,34 +1,112 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Casos de Uso
 
-First, run the development server:
+Referem-se aos serviços, tarefas ou funções que podem ser utilizadas de alguma maneira pelos usuários do sistema;
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Representados na forma de elipses com texto interno descrevendo a que serviço o caso de uso se refere.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Associações
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Representam as interações ou relacionamentos entre os casos de uso:  
+    **Inclusão.**  
+    **Extensão.**  
+    **Generalização.**   
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.tsx`.
+– Os atores e os casos de uso Indica que este ator pode usar a função do sistema representada pelo caso de uso;
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+– Os atores que fazem parte do diagrama:  
+    **Generalização**
 
-## Learn More
+## Especificação de um Caso de Uso
 
-To learn more about Next.js, take a look at the following resources:
+Casos de uso são requisitos principalmente funcionais, mas podem registrar outros (não funcionais);
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Casos de uso são documentos textuais, mas a UML define um diagrama diagrama de casos de uso para ilustrar ilustrar o sistema de uma forma geral:  
+– Nomes dos casos de uso;  
+– Nomes dos atores e interação dos mesmos com o sistema;  
+– Relacionamentos entre casos de uso.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Tipos e Formatos de Casos de Uso
 
-## Deploy on Vercel
+Casos de uso caixa preta (omitem o comportamento interno) – mais comuns e recomendados.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Exemplo do estilo:  
+– Recomendado Recomendado: o sistema sistema registra registra a venda;  
+– Não Recomendado: o sistema grava a venda em um banco de dados (ou mesmo, gera uma instrução INSERT).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Exemplo de caso de uso
+
+### Caso de Uso CDU1: Processar Venda
+
+#### Interessados e Interesses:
+Caixa: deseja entrada rápida, precisa e sem erros, de pagamento, pois a falta de dinheiro na gaveta do caixa será deduzida do seu salário.
+
+#### Pré-condições:
+O caixa é identificado e autenticado.
+
+#### Garantias de Sucesso (pós-condições):   
+A Venda é salva. Os impostos são corretamente calculados. A contabilidade e o Estoque são atualizados. As Comissões são registradas. O recibo é gerado. As aprovações de pagamento são registradas.
+
+#### Cenário de Sucesso Principal (ou Fluxo Básico):
+
+1. O Cliente chega ao PDV com os bens e/ou serviços que deseja adquirir.
+2. O Caixa inicia uma nova Venda.
+3. O Caixa digita o identificador do item.
+4. O sistema registra a linha de item da venda e apresenta uma descrição do item, o seu preço e o total parcial para a venda. O preço é calculado segundo um conjunto de regras de preços.
+5. O Caixa repete os passos 3 e 4 até que indique ter terminado.
+
+#### Extensões (ou Fluxos Alternativos):   
+##### A qualquer momento o sistema falha:   
+Para suportar a recuperação e a correta contabilização, garanta que todas as informações de estado sensíveis das transações transações e todos os eventos eventos possam ser recuperados a partir de qualquer passo do cenário.
+
+#### Requisitos Especiais:   
+Interface com o Usuário por tela sensível ao toque em um monitor de painel grande. O texto deve ser visível a uma distância de 1 metro.
+
+#### Lista de Variações Variações Tecnológicas Tecnológicas e de Dados:   
+Identificador de item inserido por leitora de código de barras, se estistir.
+
+##### Freqüência de Ocorrência:  
+Poderia ser quase contínuo.  
+##### Problemas em Aberto:  
+Quais as variações nas leis de impostos?
+
+## Como Encontrar Atores, Objetivos e Casos de Uso?
+
+### Casos de uso são identificados para satisfazer aos objetivos de usuário dos atores principais:
+Escolher a fronteira do sistema;
+Identificar os atores principais;
+aqueles que devem ter objetivos de usuário;
+Para cada um, identifique os objetivos de usuário;
+Defina casos de uso de satisfaçam os objetivos dos usuários, nomeie-os de acordo com o objetivo.
+
+Inicialmente redija os casos de uso no estilo essencial – sem levar em consideração aspectos da interface com o usuário;
+
+O estilo concreto – deixa claro no texto decisões sobre a interface com o usuário – próprio para as fases seguintes à concepção/iniciação.
+
+## Diagrama de Casos de Uso
+
+O que é?  
+– Diagrama pertencente a UML.
+
+Objetivos  
+– Apresentar uma visão externa geral das funções e serviços que o sistema vai oferecer aos usuários;
+– Atuar como ferramenta na etapa de levantamento de requisitos.
+
+## Atores
+
+- Um diagrama de casos de uso é composto basicamente por atores e casos de uso;
+- Os atores representam os papéis desempenhados pelos diversos usuários que poderão utilizar o sistema;
+- Um ator pode representar um hardware especial ou mesmo outro sistema;
+- Em suma: qualquer agente externo que interaja com o sistema.
+
+## Relacionamento de Generalização/Especialização
+
+• Relaciona casos de uso com características semelhantes e pequenas diferenças entre si;
+• Nesses casos é definido um caso de uso geral e definir casos de uso que são especializações deste;
+• Neste caso evita-se a redação das partes genéricas em mais de um caso de uso, a redação dos casos de uso especializados se concentra nas diferenças.
+
+
+## Aprenda Mais
+
+Para aprender mais sobre Casos de Uso para desenvolvimento de softwares acesse este [Link](https://www.dca.ufrn.br/~anderson/FTP/dca0120/P2_Aula3.pdf)
