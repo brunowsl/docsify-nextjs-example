@@ -74,10 +74,10 @@ Quais as variações nas leis de impostos?
 ## Como Encontrar Atores, Objetivos e Casos de Uso?
 
 ### Casos de uso são identificados para satisfazer aos objetivos de usuário dos atores principais:
-Escolher a fronteira do sistema;
-Identificar os atores principais;
-aqueles que devem ter objetivos de usuário;
-Para cada um, identifique os objetivos de usuário;
+Escolher a fronteira do sistema;  
+Identificar os atores principais;  
+aqueles que devem ter objetivos de usuário;  
+Para cada um, identifique os objetivos de usuário;  
 Defina casos de uso de satisfaçam os objetivos dos usuários, nomeie-os de acordo com o objetivo.
 
 Inicialmente redija os casos de uso no estilo essencial – sem levar em consideração aspectos da interface com o usuário;
