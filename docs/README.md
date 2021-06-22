@@ -63,7 +63,7 @@ Para suportar a recuperação e a correta contabilização, garanta que todas as
 #### Requisitos Especiais:   
 Interface com o Usuário por tela sensível ao toque em um monitor de painel grande. O texto deve ser visível a uma distância de 1 metro.
 
-#### Lista de Variações Variações Tecnológicas Tecnológicas e de Dados:   
+#### Lista de Variações Tecnológicas e de Dados:   
 Identificador de item inserido por leitora de código de barras, se estistir.
 
 ##### Freqüência de Ocorrência:  
